@@ -50,7 +50,7 @@ convertcart_assignment/
    
    Create `.env` file in `services/product-service/`:
    ```env
-   DATABASE_URL="file:./dev.db"
+   DATABASE_URL="postgresql://username:password@localhost:5432/convertcart"
    WOOCOMMERCE_URL="your-woocommerce-site-url"
    WOOCOMMERCE_CONSUMER_KEY="your-consumer-key"
    WOOCOMMERCE_CONSUMER_SECRET="your-consumer-secret"
@@ -128,41 +128,6 @@ npm run dev
     ]
   }
   ```
-
-## 🔧 Rule Syntax
-
-The system supports natural language-like rule syntax:
-
-```
-# Price rules
-price > 100
-price < 50
-price = 25.99
-price between 10 and 100
-
-# Category rules
-category = 'Electronics'
-category in ['Electronics', 'Accessories']
-
-# Stock rules
-stock_quantity > 10
-stock_quantity < 5
-stock_status = 'instock'
-
-# Sale rules
-on_sale = true
-on_sale = false
-
-# Date rules
-created_after '2024-01-01'
-created_before '2024-12-31'
-
-# Logical operators
-and(price > 100, category = 'Electronics')
-or(on_sale = true, stock_quantity < 5)
-not(category = 'Outdated')
-```
-
 ## 🛠️ Development
 
 ### Project Scripts
@@ -223,7 +188,7 @@ docker-compose down
 
 ## 📊 Database
 
-- **ORM**: Prisma with SQLite
+- **ORM**: Prisma with Postgres
 - **Migrations**: Automatic schema management
 - **Models**: Product, Category, Tags
 
@@ -244,9 +209,8 @@ The cron service automatically syncs products from WooCommerce every 20 seconds 
 ### Common Issues
 
 1. **Port conflicts**: Ensure ports 3000, 4000, and 5000 are available
-2. **Database issues**: Delete `dev.db` and restart to reset database
-3. **WooCommerce connection**: Verify API credentials and URL
-4. **Build errors**: Run `npm run clean` and rebuild
+2. **WooCommerce connection**: Verify API credentials and URL
+3. **Build errors**: Run `npm run clean` and rebuild
 
 ### Logs
 
