@@ -36,6 +36,36 @@ convertcart_assignment/
 └── package.json           # Root package configuration
 ```
 
+## 🧠 AI Usage & Development Notes
+
+### AI Tools Used
+
+**Windsurf Cascade**: Used for initial project scaffolding and boilerplate generation with the following prompt:
+
+> Create a monorepo project called "microservices-app" using TypeScript for all services. The app includes three microservices:
+> 
+> 1. **product-service**: TypeScript + Node.js + Express + Prisma, WooCommerce ingestion, PostgreSQL storage
+> 2. **segment-service**: TypeScript + Node.js + Express, rule-based filtering from product-service  
+> 3. **frontend**: TypeScript + React or Next.js, displays product cards and accepts segmentation rules
+> 
+> Also generate: docker-compose.yml, Prisma schema, .env.example files, README with usage instructions
+> Use Node.js 18+, Prisma, PostgreSQL, Docker
+
+### AI Contributions
+- Generated monorepo structure and microservice boilerplate
+- Created Docker configuration and Prisma schema
+- Built frontend scaffolding with shadcn/ui components
+- Implemented rule-based textarea input and product card UI
+
+### Manual Development & Enhancements
+- Extended service logic for real WooCommerce data integration
+- Improved error handling and environment variable management
+- Enhanced UI/UX with better styling and user feedback
+- Refined rule parser for robust segment evaluation
+- Added comprehensive API testing and service integration
+- Deployed services to cloud platforms (Vercel, Render)
+- Created detailed documentation and setup instructions
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -109,7 +139,7 @@ npm run dev
 
 ### Product Management
 - **WooCommerce Integration**: Automatic product synchronization
-- **Database Storage**: SQLite database with Prisma ORM
+- **Database Storage**: Postgres database with Prisma ORM
 - **RESTful API**: Product CRUD operations
 
 ### Segment Evaluation
@@ -119,7 +149,6 @@ npm run dev
   - Stock quantity (`stock_quantity > 10`)
   - Category filtering (`category = 'Electronics'`)
   - Sale status (`on_sale = true`)
-  - Date filtering (`created_after '2024-01-01'`)
 
 ### Frontend Features
 - **Modern UI**: Built with Next.js 15 and shadcn/ui
