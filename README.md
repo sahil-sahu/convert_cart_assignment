@@ -37,7 +37,7 @@ convertcart_assignment/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/sahil-sahu/convert_cart_assignment
    cd convertcart_assignment
    ```
 
@@ -54,6 +54,11 @@ convertcart_assignment/
    WOOCOMMERCE_URL="your-woocommerce-site-url"
    WOOCOMMERCE_CONSUMER_KEY="your-consumer-key"
    WOOCOMMERCE_CONSUMER_SECRET="your-consumer-secret"
+   ```
+
+   Create `.env.local` file in `frontend/` (optional):
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:5000
    ```
 
 ### Running the Application
