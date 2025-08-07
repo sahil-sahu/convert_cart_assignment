@@ -1,0 +1,26 @@
+{
+  "name": "microservices-app",
+  "version": "1.0.0",
+  "description": "A TypeScript microservices application with product management and segmentation",
+  "private": true,
+  "workspaces": [
+    "./services/product-service",
+    "./services/main-service",
+    "./frontend",
+    "./services/cron"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=./services/product-service\" \"npm run dev --workspace=./services/main-service\" \"npm run dev --workspace=./frontend\" \"npm run dev --workspace=./services/cron\"",
+    "build": "npm run build --workspaces",
+    "start": "concurrently \"npm run start --workspace=./services/product-service\" \"npm run start --workspace=./services/main-service\" \"npm run start --workspace=./frontend\" \"npm run start --workspace=./services/cron\"",
+    "start:dev": "docker-compose -f docker-compose.dev.yml up",
+    "clean": "npm run clean --workspaces",
+    "install:all": "npm install && npm install --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

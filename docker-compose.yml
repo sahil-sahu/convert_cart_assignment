@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  product-service:
+    build:
+      context: ./services/product-service
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./services/product-service/.env
+    
+  main-service:
+    build:
+      context: ./services/main-service
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PRODUCT_SERVICE_URL=http://product-service:4000
+    
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+    
+networks:
+    app-network:
+      driver: bridge
+    
