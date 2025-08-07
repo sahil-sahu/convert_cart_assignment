@@ -62,7 +62,6 @@ convertcart_assignment/
 - Improved error handling and environment variable management
 - Enhanced UI/UX with better styling and user feedback
 - Refined rule parser for robust segment evaluation
-- Added comprehensive API testing and service integration
 - Deployed services to cloud platforms (Vercel, Render)
 - Created detailed documentation and setup instructions
 
