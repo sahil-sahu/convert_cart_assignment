@@ -14,7 +14,7 @@ export function ProductsList({ rules }: { rules: string[] }) {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch( (process.env.NEXT_PUBLIC_API_URL||'http://localhost:5000') + '/segments/evaluate', {
+        const response = await fetch( (process.env.NEXT_PUBLIC_URL||'http://localhost:5000') + '/segments/evaluate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
