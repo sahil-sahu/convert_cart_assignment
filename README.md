@@ -2,6 +2,18 @@
 
 A TypeScript-based microservices application for product management and segmentation with a modern React frontend.
 
+## 🌐 Live Demo
+
+**Frontend Application**: [https://convert-cart-assignment.vercel.app/](https://convert-cart-assignment.vercel.app/)
+
+**Backend Services**:
+- **Main Service**: [https://convert-cart-assignment.onrender.com/](https://convert-cart-assignment.onrender.com/)
+- **Product Service**: [https://convert-cart-assignment-1.onrender.com/](https://convert-cart-assignment-1.onrender.com/)
+
+> **Note**: Backend services are hosted on Render's free tier and may experience cold starts. If the frontend shows connection errors, please visit the health endpoints first to wake up the services:
+> - Main Service Health: [https://convert-cart-assignment.onrender.com/health](https://convert-cart-assignment.onrender.com/health)
+> - Product Service Health: [https://convert-cart-assignment-1.onrender.com/health](https://convert-cart-assignment-1.onrender.com/health)
+
 ## 🏗️ Architecture
 
 This project consists of multiple microservices:

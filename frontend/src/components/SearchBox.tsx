@@ -34,14 +34,17 @@ const SearchBox = ({ rules, setRules }: { rules: string[]; setRules: (rules: str
                     <Label>Enter filter rules (one rule per line)</Label>
                     <Textarea 
                         ref={textareaRef}
-                        placeholder="price > 100 \n stock_quantity < 10 \n on_sale = true" 
+                        placeholder="price > 10 \n on_sale = true \n category = Accessories" 
                         name="rules" 
                         className="w-full"
                         minLength={10}
                     />
                     <div>
                         Example: <span className="text-muted-foreground w-lg block">
-                        price &gt; 10 <br /> stock_quantity &lt; 10 <br /> on_sale = true
+                        price &gt; 10 <br /> on_sale = true <br /> category = Accessories
+                        </span>
+                        <span className="text-muted-foreground w-lg block">
+                            Avaliable keywords : price, on_sale, category,title,stock_quantity, stock_status
                         </span>
                     </div>
                 </div>
