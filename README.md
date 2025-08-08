@@ -172,13 +172,13 @@ The segment evaluation endpoint supports various rule formats:
 - `"price >= 50 && price <= 200"` - Products in price range
 
 **String Comparisons:**
-- `"category == 'Electronics'"` - Products in Electronics category
-- `"stock_status == 'instock'"` - Products in stock
+- `"category = 'Electronics'"` - Products in Electronics category
+- `"stock_status = 'instock'"` - Products in stock
 - `"title.includes('Premium')"` - Products with 'Premium' in title
 
 **Boolean Comparisons:**
-- `"on_sale == true"` - Products on sale
-- `"on_sale == false"` - Products not on sale
+- `"on_sale = true"` - Products on sale
+- `"on_sale = false"` - Products not on sale
 
 **Array Operations:**
 - `"tags.includes('featured')"` - Products with 'featured' tag
