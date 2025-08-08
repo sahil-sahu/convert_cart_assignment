@@ -108,8 +108,8 @@ POST /segments/evaluate
 {
   "rules": [
     "price > 50",
-    "category == 'Electronics'",
-    "on_sale == true"
+    "category = 'Electronics'",
+    "on_sale = true"
   ]
 }
 ```
